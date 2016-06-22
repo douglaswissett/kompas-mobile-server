@@ -68,43 +68,43 @@ Key Points to address in planning:
 <br>
 #### User Stories
 
-As a new visitor, I should be able to join
-As a visitor, I should be able to sign in with: Local / Instagram / Foursquare
-As a user, I should be able to view a menu
-As a user, I should be able to view interests
-As a user, I should be able to choose interests
-As a user, I should be able to view my profile
-As a user, I should be able to view my dashboard
-As a user, I should be able to view who I'm following
-As a user, I should be able to view who is following me
-As a user, I should be able to write posts
-As a user, I should be able to view others posts
-As a user, I should be able to view posts info
-As a user, I should be able to view posts images
-As a user, I should be able to share post image
-As a user, I should be able to report post image
-As a user, I should be able to view posts location
-As a user, I should be able to write posts reviews
-As a user, I should be able to share post location
-As a user, I should be able to amend post info
-As a user, I should be able to like posts
-As a user, I should be able to view my itinerary
-As a user, I should be able to view event info
-As a user, I should be able to delete event
-As a user, I should be able to replace event
-As a user, I should be able to view event journey info
-As a user, I should be able to view event journey map
-As a user, I should be able to view my photo collection
-As a user, I should be able to choose favourites
-As a user, I should be able to friends
-As a user, I should be able to...
-As a user, I should be able to...
-As a user, I should be able to...
-As a user, I should be able to...
-As a user, I should be able to...
-As a user, I should be able to...
-As a user, I should be able to view App settings
-As a user, I should be able to logout
+>- As a new visitor, I should be able to join
+- As a visitor, I should be able to sign in with: Local / Instagram / Foursquare
+- As a user, I should be able to view a menu
+- As a user, I should be able to view interests
+- As a user, I should be able to choose interests
+- As a user, I should be able to view my profile
+- As a user, I should be able to view my dashboard
+- As a user, I should be able to view who I'm following
+- As a user, I should be able to view who is following me
+- As a user, I should be able to write posts
+- As a user, I should be able to view others posts
+- As a user, I should be able to view posts info
+- As a user, I should be able to view posts images
+- As a user, I should be able to share post image
+- As a user, I should be able to report post image
+- As a user, I should be able to view posts location
+- As a user, I should be able to write posts reviews
+- As a user, I should be able to share post location
+- As a user, I should be able to amend post info
+- As a user, I should be able to like posts
+- As a user, I should be able to view my itinerary
+- As a user, I should be able to view event info
+- As a user, I should be able to delete event
+- As a user, I should be able to replace event
+- As a user, I should be able to view event journey info
+- As a user, I should be able to view event journey map
+- As a user, I should be able to view my photo collection
+- As a user, I should be able to choose favourites
+- As a user, I should be able to friends
+- As a user, I should be able to...
+- As a user, I should be able to...
+- As a user, I should be able to...
+- As a user, I should be able to...
+- As a user, I should be able to...
+- As a user, I should be able to...
+- As a user, I should be able to view App settings
+- As a user, I should be able to logout
 
 <br>
 #### Data Modelling
