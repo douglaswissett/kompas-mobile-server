@@ -3,13 +3,13 @@
 
 <br>
 #### Table of Content
-[System Requirements](#system-requirements)
-[Dependencies](#app-dependencies)
-[Workflow](#workflow)
-[Third-Party APIs](#third-party-apis)
-[User Stories](#user-stories)
-[Data Models](#data-modelling)
-[Contributions](#contributions)
+- [System Requirements](#system-requirements)
+- [Dependencies](#app-dependencies)
+- [Workflow](#workflow)
+- [Third-Party APIs](#third-party-apis)
+- [User Stories](#user-stories)
+- [Data Models](#data-modelling)
+- [Contributions](#contributions)
 
 <br>
 #### System Requirements
@@ -68,7 +68,7 @@ Key Points to address in planning:
 <br>
 #### User Stories
 
->As a new visitor, I should be able to join
+As a new visitor, I should be able to join
 As a visitor, I should be able to sign in with: Local / Instagram / Foursquare
 As a user, I should be able to view a menu
 As a user, I should be able to view interests
