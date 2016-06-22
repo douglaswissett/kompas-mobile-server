@@ -57,6 +57,7 @@ Key Points to address in planning:
 - Database Setup
 - Views / Template
 - Deployment
+- Maintenance
 ```
 
 <br>
