@@ -14,9 +14,9 @@
 <br>
 #### System Requirements
 ```
-- Node v6.2.1 (npm)
-- Express v4.13.1
-- MongoDB Shell version: 3.2.6
+- Node version 6.2.1 (npm version 3.9.3)
+- Express version 4.13.1
+- MongoDB Shell version 3.2.6
 ```
 <br>
 #### App Dependencies
