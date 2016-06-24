@@ -21,6 +21,8 @@ block content
                     input(type="checkbox" name="category_cbox" class="category_cbox" value="#{category.name}")
         br
         p #{message}
+
+
   script.
     $.ajax({
       url: '/api/v1/categories/stored'
@@ -34,4 +36,3 @@ block content
         })
       })
     });
-  //- script(src="/javascripts/show_categories.js")
