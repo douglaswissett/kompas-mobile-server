@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  .container
+    h1 Location Info
+    p.lead Name: #{location.name}
+    ul
+      li
+        p Location: #{location.location}
+      li
+        p City: #{location.city}
+      li
+        p Category: #{location.category}
+      li
+        p Sub-Category: #{location.sub_category}
+      li
+        p Geo Coordinates: #{location.geo}
+      li
+        p Related IDs: #{location.related_ids}
+      li
+        p Description: #{location.description}
+      li
+        p Meta Tags: #{location.meta_tags}
+      li
+        p Photo Link: #{location.photo_link}

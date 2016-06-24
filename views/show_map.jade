@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  style.
+    #map {
+      height: 400px;
+      width: 400px;;
+    }
+  
+  each location in locations
+    input(type="hidden" class="locations" value="#{location.name}|#{location.geo}")
+
+  .container
+    .row
+      .col-md-6
+        div#map
+      .col-md-6
+        ul.places-ul
+          each location in locations
+            li 
+              a(href="/api/v1/locations/" + location._id) #{location.name}
+
+
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZwpThrbZbJVY1yt-oTlYePJ_s5I-GZIU")

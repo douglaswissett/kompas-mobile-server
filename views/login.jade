@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  .container
+    .row
+      .col-md-6.col-md-offset-3
+        form(role='form', action="/auth/login",method="post", style='max-width: 300px;')
+          .form-group
+            input.form-control(type='email', name="email", placeholder='email')
+          .form-group
+            input.form-control(type='password', name="password", placeholder='Password')
+          .form-group
+            a(href="") 
+              p.text-right Forgot password?
+          .form-group.text-center
+            button.btn.btn-default(type='submit') Sign In
+          p.lead.text-center Or
+          
+        a(href='/auth/instagram')
+          button.btn.btn-default Login with Instagram
+        
+        a(href='/register')
+          button.btn.btn-primary(type="button") Not signed up yet?
+        p #{message}

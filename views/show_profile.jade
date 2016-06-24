@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  .container
+    h1 User Profile 
+    p.lead Username: #{profile.username} IG: #{profile.instagram_id}
+    ul
+      li
+        p First name: #{profile.first_name}
+      li
+        p Last name: #{profile.last_name}
+      li
+        p Email: #{profile.email}
+      li
+        p Bio: #{profile.bio}
+      li
+        img(src="#{profile.profile_picture}", alt="profile_picture")

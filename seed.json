@@ -1,0 +1,5 @@
+{
+	"undefined": "localhost/kompas_test",
+	"dev": "localhost/",
+	"prod": "localhost/"
+}

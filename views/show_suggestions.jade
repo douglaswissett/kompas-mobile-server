@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  .container
+    h1 #{title} in #{current_location}
+    p.lead #{description}
+    br
+
+    ul
+      for item in data
+        li
+          div
+            ul
+              p ----------------------------------------------------------------------------------------------
+              li= item.venue.name
+              li= item.venue.categories[0].name+' Address: '+item.venue.location.formattedAddress
+              br
+              li= item.reasons.items[0].summary + ' - ' + item.venue.rating + ' Rating'
+              if (item.tips[0].likes)
+                li= 'Likes: '+item.tips[0].likes.count
+              else
+                li= 'Likes: -'
+              li= 'Checked In: '+ item.venue.stats.checkinsCount
+              li= 'Users count: '+ item.venue.stats.usersCount
+              li= item.tips[0].text
+              br
+              if (item.venue.price)
+                li= 'Price: '+ item.venue.price.currency + ' ' + item.venue.price.message
+              else 
+                li Price: N/A
+              if (item.venue.hours)
+                li= 'Is Open: '+item.venue.hours.isOpen
+                li= item.venue.hours.status
+              else
+                li= 'Is Open: N/A'
+              p ----------------------------------------------------------------------------------------------
+              br
+      else
+        li sorry, no place info

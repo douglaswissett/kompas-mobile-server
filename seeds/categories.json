@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Food",
+    "description": "",
+    "photo_link": "-"
+  },
+  {
+    "name": "Nightlife Spot",
+    "description": "",
+    "photo_link": "-"
+  },
+  {
+    "name": "Shop",
+    "description": "",
+    "photo_link": "-"
+  },
+  {
+    "name": "Travel",
+    "description": "",
+    "photo_link": "-"
+  },
+  {
+    "name": "Government Building",
+    "description": "",
+    "photo_link": "-"
+  },
+  {
+    "name": "Public Art",
+    "description": "",
+    "photo_link": "-"
+  },
+  {
+    "name": "Residence",
+    "description": "",
+    "photo_link": "-"
+  }
+]
