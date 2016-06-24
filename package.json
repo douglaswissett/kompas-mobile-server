@@ -10,7 +10,6 @@
     "start": "nodemon ./bin/www"
   },
   "dependencies": {
-    "bcrypt": "^0.8.7",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "~1.13.2",
     "bootstrap": "^3.3.6",

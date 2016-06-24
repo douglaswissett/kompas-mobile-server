@@ -1,6 +1,5 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-// var passportLocalMongoose = require('passport-local-mongoose');
 var bcrypt   = require('bcrypt-nodejs');
 
 var userSchema = new Schema({
@@ -36,9 +35,6 @@ userSchema.statics.updateLocation = function( username , coordinates) {
     if (err) throw err;
   })
 }
-
-
-// userSchema.plugin(passportLocalMongoose);
 
 // create the model for users and expose it to our app
 module.exports = mongoose.model('User', userSchema);
