@@ -17,41 +17,24 @@ module.exports = function(User, LocationSchema) {
       })
     })
   });
-
+  // get recommended locations based on user categories
   router.get('/recommended', function(req, res) {
     var query_collection = [];
     User.findOne({username: req.user.username}, {categories: 1}, function(err, stored_categories) {
       if (err) throw err;
-
-      function recursiveStored(i, collection) {
-        if (i == collection.length) return;
-
-        LocationSchema.find({category: collection[i]}, function(err, locations) {
-          function recursivePushLocation(j, data) {
-            if(j == data.length) return;
-
-            query_collection.push(data[j]);
-            j++;
-            recursivePushLocation(j, data)
-          }
-          i++
-          recursiveStored(i, collection);
+      stored_categories.categories.forEach(function(category) {
+        LocationSchema.find({category: category}, function(err, locations) {
+          locations.forEach(function(location) {
+            query_collection.push(location);
+          })
         })
-      }
-
-      // stored_categories.categories.forEach(function(category) {
-      //   LocationSchema.find({category: category}, function(err, locations) {
-      //     locations.forEach(function(location) {
-      //       query_collection.push(location);
-      //     })
-      //   })
-      // })
+      })
     })
-    
-    console.log(query_collection);
-    // res.render('show_map', {locations: query_collection, user: req.user});
+    // allow time for forEach to complete, need a better solution
+    setTimeout(function(){
+      res.render('show_map', {locations: query_collection, user: req.user});
+    },1000);
   })
-
   // display profile of location
   router.get('/:location_id', function(req, res) {
     LocationSchema.findOne({ _id: req.params.location_id }, function(err, location) {
