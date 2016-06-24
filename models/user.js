@@ -10,13 +10,16 @@ var userSchema = new Schema({
   password     : String,
   bio          : String,
   location     : String,
-  visits       : [],
   instagram_id : String,
   profile_picture : String,
   geo: {
     type: [Number],
     index: '2d'
   },
+  visits       : [],
+  categories : [],
+  following: [],
+  followers: []
 });
 
 // methods ======================

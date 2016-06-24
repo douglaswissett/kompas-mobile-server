@@ -56,7 +56,7 @@ mongoose.connect(dbConfig.url);
 var routes = require('./routes/index')(LocationSchema, ensureAuthenticated);
 var users = require('./routes/users')(User, LocationSchema);
 var locations = require('./routes/locations')(User, LocationSchema);
-var categories = require('./routes/categories')(Categories, LocationSchema);
+var categories = require('./routes/categories')(Categories, LocationSchema, User);
 var auth = require('./routes/auth')(passport, User);
 
 // Routes

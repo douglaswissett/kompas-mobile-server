@@ -4,7 +4,35 @@ block content
   .container
     .row
       .col-md-6
-        ul
-          each category in categories
-            li 
-              a(href="/api/v1/categories/" + category.name) #{category.name}
+        form(action="/api/v1/categories/addto/#{user.username}" method="POST")
+          table
+            thead
+              tr 
+                th name
+                th like
+                th 
+                  button.btn.btn-default(type='submit') Save categories
+            tbody
+              each category in categories
+                tr
+                  td
+                    a(href="/api/v1/categories/" + category.name) #{category.name}
+                  td
+                    input(type="checkbox" name="category_cbox" class="category_cbox" value="#{category.name}")
+        br
+        p #{message}
+  script.
+
+    $.ajax({
+      url: '/api/v1/categories/stored'
+    })
+    .done(function(data) {
+      $('.category_cbox').each(function(i, val) {
+        data.forEach(function(category) {
+          if(val.value === category) {
+            $(val).prop('checked', true)
+          }
+        })
+      })
+    });
+
