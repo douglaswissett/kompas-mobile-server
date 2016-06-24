@@ -12,7 +12,6 @@ module.exports = function(Categories, LocationSchema, User) {
   router.get('/stored', function(req, res) {
     User.findOne({username: req.user.username}, {categories: 1}, function(err, stored_categories) {
       if (err) throw err;
-      console.log('TEST ', stored_categories.categories);
       res.send(stored_categories.categories);
     })
   });
