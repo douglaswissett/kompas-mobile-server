@@ -56,8 +56,22 @@ Key Points to address in planning:
 - Data Modelling
 - Database Setup
 - Views / Template
+- Testing
 - Deployment
 - Maintenance
+```
+
+<br>
+#### Checklist
+```
+- Create Server - Created
+- User Authentication - Local and Instagram
+- Routes - Index/Auth/Users/Locations/Categories
+- Connect to Database - Connected to localhost/kompas_test
+- Models - UsersSchema/LocationsSchema/CategoriesSchema
+- CSV Imports - London Database
+- Views - Layout/Index/Login/Register/Show_Pages/Error/Not_Authorized
+- Deployed to: 178.62.17.178
 ```
 
 <br>
