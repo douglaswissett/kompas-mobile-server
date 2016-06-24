@@ -19,6 +19,9 @@ block content
           each location in locations
             li 
               a(href="/api/v1/locations/" + location._id) #{location.name}
-
+          else
+            li
+              p No locations found
+    
 
   script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZwpThrbZbJVY1yt-oTlYePJ_s5I-GZIU")
