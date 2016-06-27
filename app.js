@@ -57,6 +57,7 @@ var routes = require('./routes/index')(LocationSchema, ensureAuthenticated);
 var users = require('./routes/users')(User, LocationSchema);
 var locations = require('./routes/locations')(User, LocationSchema);
 var categories = require('./routes/categories')(Categories, LocationSchema, User);
+var follows = require('./routes/follows')(User);
 var auth = require('./routes/auth')(passport, User);
 
 // Routes
@@ -64,6 +65,7 @@ app.use('/', routes);
 app.use('/api/v1/users', ensureAuthenticated, users);
 app.use('/api/v1/locations', ensureAuthenticated, locations);
 app.use('/api/v1/categories', ensureAuthenticated, categories);
+app.use('/api/v1/follows', ensureAuthenticated, follows);
 app.use('/auth', auth);
 
 

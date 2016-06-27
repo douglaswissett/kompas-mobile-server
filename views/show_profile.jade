@@ -15,3 +15,18 @@ block content
         p Bio: #{profile.bio}
       li
         img(src="#{profile.profile_picture}", alt="profile_picture")
+      li
+        h3 Following: #{profile.following.length}
+        ul
+          each follow in profile.following
+            li #{follow.username}
+      li
+        h3 Followers:
+
+
+    if (user.username !== profile.username)     
+      form(action="/api/v1/follows/" method="post")
+        input(type="hidden" name="username" value="#{profile.username}")
+        button.btn.btn-primary(type="submit") Follow
+
+    p #{message}

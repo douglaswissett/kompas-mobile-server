@@ -16,7 +16,9 @@ block content
           a(href="/login").btn.btn-default Sign In
         
         if (user)
-          p.lead Welcome #{user.username}
+          p.lead Welcome 
+            a(href="/api/v1/users/" + user.username) #{user.username}
+
           a(href="/api/v1/users") 
             button.btn.btn-default Users
           br
