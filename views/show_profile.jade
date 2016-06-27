@@ -2,6 +2,8 @@ extends layout
 
 block content
   .container
+    a(href="/api/v1/users")
+      button.btn.btn-default Back
     h1 User Profile 
     p.lead Username: #{profile.username} IG: #{profile.instagram_id}
     ul
@@ -16,12 +18,24 @@ block content
       li
         img(src="#{profile.profile_picture}", alt="profile_picture")
       li
-        h3 Following: #{profile.following.length}
-        ul
-          each follow in profile.following
-            li #{follow.username}
+        br
+        button.btn.btn-default.following-btn Following: #{profile.following.length}
+
+        .following-list
+          ul
+            each follow in profile.following
+              li 
+                a(href="/api/v1/users/" + follow.username) #{follow.username}
+
       li
-        h3 Followers:
+        br
+        button.btn.btn-default.followers-btn Followers: #{profile.followers.length}
+        .followers-list
+          ul
+            each follower in profile.followers
+              li
+                a(href="/api/v1/users/" + follower.username) #{follower.username}
+
 
 
     if (user.username !== profile.username)     
@@ -30,3 +44,16 @@ block content
         button.btn.btn-primary(type="submit") Follow
 
     p #{message}
+
+
+  script.
+    $('.following-list').hide();
+    $('.followers-list').hide();
+
+    $('.following-btn').click(function(event) {
+      $('.following-list').fadeToggle();
+    })
+
+    $('.followers-btn').click(function(event) {
+      $('.followers-list').fadeToggle();
+    })

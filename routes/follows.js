@@ -5,22 +5,36 @@ module.exports = function(User) {
   
   router.get('/', function(req, res) {});
 
+  // post follow / follower relationship
   router.post('/', function(req, res) {
-
-    var follow_profile = {
+    // Date Now
+    var date = Date();
+    // follower object to be pushed into following array of user
+    var follower_profile = {
       username: req.body.username,
-      followed_at: Date()
+      followed_at: date
+    }
+    var follow_profile = {
+      username: req.user.username,
+      followed_since: date
     }
 
     User.count({username: req.user.username,following: {$elemMatch: {username: req.body.username}}}, function(err, count){
+      // check if already following
       if(count > 0) {
         req.flash('alreadyFollow', 'Already following '+req.body.username)
         res.redirect('/api/v1/users/' + req.body.username);
-      } else {    
-        User.update({username: req.user.username},{$push: { following: follow_profile }}, 
+      } else {
+        // add following username to follower
+        User.update({username: req.user.username},{$push: { following: follower_profile }}, 
         function(err){
           if (err) throw err;
-          res.redirect('/api/v1/users/' + req.body.username);
+          // add follower username to following
+          User.update({username: req.body.username},{$push: { followers: follow_profile }}, 
+          function(err){
+            if (err) throw err;
+            res.redirect('/api/v1/users/' + req.user.username);
+          })
         })
       }
     })
