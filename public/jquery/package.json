@@ -3,46 +3,50 @@
     [
       {
         "name": "jquery",
-        "raw": "jquery@2.2.0",
-        "rawSpec": "2.2.0",
+        "raw": "jquery@^2.2.4",
+        "rawSpec": "^2.2.4",
         "scope": null,
-        "spec": "2.2.0",
-        "type": "version"
+        "spec": ">=2.2.4 <3.0.0",
+        "type": "range"
       },
-      "/Users/douglaswalker/dev/passport-auth"
+      "/Users/douglaswalker/dev/kompas"
     ]
   ],
-  "_from": "jquery@2.2.0",
-  "_id": "jquery@2.2.0",
+  "_from": "jquery@>=2.2.4 <3.0.0",
+  "_id": "jquery@2.2.4",
   "_inCache": true,
   "_installable": true,
   "_location": "/jquery",
-  "_nodeVersion": "5.2.0",
+  "_nodeVersion": "0.10.45",
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/jquery-2.2.4.tgz_1463765166836_0.5834389675874263"
+  },
   "_npmUser": {
     "email": "timmywillisn@gmail.com",
     "name": "timmywil"
   },
-  "_npmVersion": "3.3.12",
+  "_npmVersion": "2.15.1",
   "_phantomChildren": {},
   "_requested": {
     "name": "jquery",
-    "raw": "jquery@2.2.0",
-    "rawSpec": "2.2.0",
+    "raw": "jquery@^2.2.4",
+    "rawSpec": "^2.2.4",
     "scope": null,
-    "spec": "2.2.0",
-    "type": "version"
+    "spec": ">=2.2.4 <3.0.0",
+    "type": "range"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/jquery/-/jquery-2.2.0.tgz",
-  "_shasum": "d0e84ebbf199da51bf7ec39307f19b35754e9cba",
+  "_resolved": "https://registry.npmjs.org/jquery/-/jquery-2.2.4.tgz",
+  "_shasum": "2c89d6889b5eac522a7eea32c14521559c6cbf02",
   "_shrinkwrap": null,
-  "_spec": "jquery@2.2.0",
-  "_where": "/Users/douglaswalker/dev/passport-auth",
+  "_spec": "jquery@^2.2.4",
+  "_where": "/Users/douglaswalker/dev/kompas",
   "author": {
     "name": "jQuery Foundation and other contributors",
-    "url": "https://github.com/jquery/jquery/blob/2.2.0/AUTHORS.txt"
+    "url": "https://github.com/jquery/jquery/blob/2.2.4/AUTHORS.txt"
   },
   "bugs": {
     "url": "https://github.com/jquery/jquery/issues"
@@ -103,10 +107,10 @@
   },
   "directories": {},
   "dist": {
-    "shasum": "d0e84ebbf199da51bf7ec39307f19b35754e9cba",
-    "tarball": "https://registry.npmjs.org/jquery/-/jquery-2.2.0.tgz"
+    "shasum": "2c89d6889b5eac522a7eea32c14521559c6cbf02",
+    "tarball": "https://registry.npmjs.org/jquery/-/jquery-2.2.4.tgz"
   },
-  "gitHead": "6fc01e29bdad0964f62ef56d01297039cdcadbe5",
+  "gitHead": "c0185ab7c75aab88762c5aae780b9d83b80eda72",
   "homepage": "http://jquery.com",
   "keywords": [
     "jquery",
@@ -147,5 +151,5 @@
     "test": "grunt && grunt test"
   },
   "title": "jQuery",
-  "version": "2.2.0"
+  "version": "2.2.4"
 }

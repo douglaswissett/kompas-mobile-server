@@ -111,10 +111,10 @@ Key Points to address in planning:
 - As a user, I should be able to view event journey map
 - As a user, I should be able to view my photo collection
 - As a user, I should be able to choose favourites
-- As a user, I should be able to friends
-- As a user, I should be able to...
-- As a user, I should be able to...
-- As a user, I should be able to...
+- As a user, I should be able to follow friends
+- As a user, I should be able to be followed
+- As a user, I should be able to form a tour group
+- As a user, I should be able to request a tour guide
 - As a user, I should be able to...
 - As a user, I should be able to...
 - As a user, I should be able to...
@@ -131,3 +131,6 @@ Key Points to address in planning:
 <br>
 #### Contributions
 KOMPAS Team
+
+
+

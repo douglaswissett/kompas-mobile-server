@@ -33,7 +33,11 @@ module.exports = function(User, LocationSchema) {
   router.get('/:username', function(req, res) {
     User.findOne({ 'username' : req.params.username }, function(err, user){
       if (err) throw err;
-      res.render('show_profile.jade', { profile: user, user: req.user });
+      res.render('show_profile.jade', { 
+        profile: user, 
+        user: req.user,
+        message: req.flash('alreadyFollow')
+      });
     });
   });
 
