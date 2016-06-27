@@ -33,8 +33,10 @@ block content
         .following-list
           ul
             each follow in profile.following
-              li 
-                a(href="/api/v1/users/" + follow.username) #{follow.username}
+              li
+                p 
+                  a(href="/api/v1/users/" + follow.username) #{follow.username}
+                  span  on #{follow.followed_at}
 
       li
         br
@@ -43,11 +45,10 @@ block content
           ul
             each follower in profile.followers
               li
-                a(href="/api/v1/users/" + follower.username) #{follower.username}
-
-
-
-
+                p
+                  a(href="/api/v1/users/" + follower.username) #{follower.username}
+                  span  on #{follower.followed_since}
+                  
     p #{message}
 
 

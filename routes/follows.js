@@ -39,14 +39,12 @@ module.exports = function(User) {
       }
     })
   })
-
+  // post unfollow / unfollower relationship
   router.post('/unfollows', function(req, res) {
-
     User.update({username: req.user.username},{$pull: { following: {username: req.body.username}}}, function(err) {
       if (err) throw err;
       User.update({username: req.body.username},{$pull: { followers: {username: req.user.username}}}, function(err) {
         if (err) throw err;
-
         res.redirect('/api/v1/users/' + req.body.username);
       })
     })
