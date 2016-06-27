@@ -6,7 +6,7 @@ module.exports = function(User, LocationSchema) {
   router.get('/', function(req, res) {
     LocationSchema.find({}, function(err, locations) {
       res.render('show_map', {locations: locations, user: req.user});
-    })
+    }).sort({name: 1});
   });
   // get nearby locations based on user location
   router.get('/nearby', function(req, res) {
