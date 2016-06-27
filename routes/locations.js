@@ -22,7 +22,11 @@ module.exports = function(User, LocationSchema) {
     var query_collection = [];
     User.findOne({username: req.user.username}, {categories: 1}, function(err, stored_categories) {
       if (err) throw err;
+
+      if (stored_categories.categories == null) return;
+
       stored_categories.categories.forEach(function(category) {
+        console.log('TEST FAIL');
         LocationSchema.find({category: category}, function(err, locations) {
           locations.forEach(function(location) {
             query_collection.push(location);
