@@ -6,7 +6,7 @@ module.exports = function(User, LocationSchema) {
   router.get('/', function(req, res) {
     LocationSchema.find({}, function(err, locations) {
       res.render('show_map', {locations: locations, user: req.user});
-    })
+    }).sort({name: 1});
   });
   // get nearby locations based on user location
   router.get('/nearby', function(req, res) {
@@ -22,7 +22,11 @@ module.exports = function(User, LocationSchema) {
     var query_collection = [];
     User.findOne({username: req.user.username}, {categories: 1}, function(err, stored_categories) {
       if (err) throw err;
+
+      if (stored_categories.categories == null) return;
+
       stored_categories.categories.forEach(function(category) {
+        console.log('TEST FAIL');
         LocationSchema.find({category: category}, function(err, locations) {
           locations.forEach(function(location) {
             query_collection.push(location);

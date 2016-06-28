@@ -6,6 +6,15 @@ block content
       button.btn.btn-default Back
     h1 User Profile 
     p.lead Username: #{profile.username} IG: #{profile.instagram_id}
+    if (user.username !== profile.username)     
+      form(action="/api/v1/follows/" method="post")
+        input(type="hidden" name="username" value="#{profile.username}")
+        button.btn.btn-primary(type="submit") Follow
+      br
+      form(action="/api/v1/follows/unfollows/" method="post")
+        input(type="hidden" name="username" value="#{profile.username}")
+        button.btn.btn-primary(type="submit") Unfollow
+      br
     ul
       li
         p First name: #{profile.first_name}
@@ -24,8 +33,10 @@ block content
         .following-list
           ul
             each follow in profile.following
-              li 
-                a(href="/api/v1/users/" + follow.username) #{follow.username}
+              li
+                p 
+                  a(href="/api/v1/users/" + follow.username) #{follow.username}
+                  span  on #{follow.followed_at}
 
       li
         br
@@ -34,15 +45,10 @@ block content
           ul
             each follower in profile.followers
               li
-                a(href="/api/v1/users/" + follower.username) #{follower.username}
-
-
-
-    if (user.username !== profile.username)     
-      form(action="/api/v1/follows/" method="post")
-        input(type="hidden" name="username" value="#{profile.username}")
-        button.btn.btn-primary(type="submit") Follow
-
+                p
+                  a(href="/api/v1/users/" + follower.username) #{follower.username}
+                  span  on #{follower.followed_since}
+                  
     p #{message}
 
 
