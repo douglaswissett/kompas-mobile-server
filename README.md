@@ -70,6 +70,8 @@ Key Points to address in planning:
 - Connect to Database - Connected to localhost/kompas_test
 - Models - UsersSchema/LocationsSchema/CategoriesSchema
 - CSV Imports - London Database
+- CSV Imports - Munich Database
+- CSV Imports - Berlin Database
 - Views - Layout/Index/Login/Register/Show_Pages/Error/Not_Authorized
 - Deployed to: 178.62.17.178
 ```
@@ -78,7 +80,7 @@ Key Points to address in planning:
 #### Third-Party APIs
 ```
 - Instagram Authentication API
-- Google Maps API
+- Mapbox / Google Map API
 ```
 <br>
 #### User Stories
