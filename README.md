@@ -127,6 +127,10 @@ Key Points to address in planning:
 #### Data Modelling
 <br>
 
+#### Issue Tracking
+
+- Insentive character searches (letter accents)
+
 ![kompas data model](Database_KOMPAS.png)
 
 <br>
