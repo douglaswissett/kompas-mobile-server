@@ -127,7 +127,7 @@ Key Points to address in planning:
 #### Data Modelling
 <br>
 
-#### Issue Tracking
+#### Issue Tracking (Move into Qeek)
 
 >- Insentive character searches (letter accents)
 
