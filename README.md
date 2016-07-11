@@ -123,13 +123,13 @@ Key Points to address in planning:
 - As a user, I should be able to view App settings
 - As a user, I should be able to logout
 
-<br>
-#### Data Modelling
-<br>
-
 #### Issue Tracking (Move into Qeek)
 
 >- Insentive character searches (letter accents)
+
+<br>
+#### Data Modelling
+<br>
 
 ![kompas data model](Database_KOMPAS.png)
 
