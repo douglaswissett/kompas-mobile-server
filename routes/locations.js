@@ -26,7 +26,6 @@ module.exports = function(User, LocationSchema) {
       if (stored_categories.categories == null) return;
 
       stored_categories.categories.forEach(function(category) {
-        console.log('TEST FAIL');
         LocationSchema.find({category: category}, function(err, locations) {
           locations.forEach(function(location) {
             query_collection.push(location);
