@@ -129,7 +129,7 @@ Key Points to address in planning:
 
 #### Issue Tracking
 
-- Insentive character searches (letter accents)
+>- Insentive character searches (letter accents)
 
 ![kompas data model](Database_KOMPAS.png)
 
