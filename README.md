@@ -126,6 +126,10 @@ Key Points to address in planning:
 #### Issue Tracking (Move into Qeek)
 
 >- Insentive character searches (letter accents)
+- React Native for Mobile Development
+- Bridging / Linking
+- React Native Deployment
+- Codepush for updates
 
 <br>
 #### Data Modelling
