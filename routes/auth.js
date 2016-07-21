@@ -15,9 +15,8 @@ module.exports = function(passport, User) {
       res.redirect('/');
   });
   router.post('/register',  passport.authenticate('local', {
-    successRedirect : '/', // redirect to the secure profile section
-    failureRedirect : '/register', // redirect back to the signup page if there is an error
-    failureFlash : true // allow flash messages
+    successRedirect : '/home', // redirect to the secure profile section
+    failureRedirect : '/rejected', // redirect back to the signup page if there is an error
   }));
   router.post('/login', passport.authenticate('local-login', {
       successRedirect : '/', // redirect to the secure profile section

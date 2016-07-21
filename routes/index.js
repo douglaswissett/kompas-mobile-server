@@ -3,20 +3,18 @@ var router = express.Router();
 
 module.exports = function(LocationSchema, ensureAuthenticated) {
   router.get('/', function(req, res) {
-    res.render('index', { 
-      title: 'KOMPAS',
-      user: req.user
-    })
+    res.send('Index');
   });
-  router.get('/register', function(req, res) {
-    res.render('register', { message: req.flash('signupMessage') });
+  router.get('/home', function(req, res) {
+    res.json(req.user)
+  })
+  router.get('/rejected', function(req, res) {
+    res.status(401);
+    res.send('Auth Failed')
   });
-  router.get('/login', function(req, res){
-    res.render('login', { 
-      user: req.user,
-      message: req.flash('loginMessage')
-    })
-  });
+  // router.get('/login', function(req, res){
+  //   res.send('Login')
+  // });
   router.get('/logout', function(req, res){
     req.logout();
     res.redirect('/');
