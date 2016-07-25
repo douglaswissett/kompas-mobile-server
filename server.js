@@ -46,6 +46,7 @@ var dbConfig = require('./db/db');
 var User = require('./models/user');
 var LocationSchema = require('./models/location_schema');
 var Categories = require('./models/categories_schema');
+var Interests = require('./models/interests_schema');
 var Db_dump = require('./models/db_dump');
 mongoose.connect(dbConfig.url);
 
@@ -57,6 +58,7 @@ var routes = require('./routes/index')(LocationSchema, ensureAuthenticated);
 var users = require('./routes/users')(User, LocationSchema);
 var locations = require('./routes/locations')(User, LocationSchema);
 var categories = require('./routes/categories')(Categories, LocationSchema, User);
+var interests = require('./routes/interests')(Interests);
 var follows = require('./routes/follows')(User);
 var auth = require('./routes/auth')(passport, User);
 
@@ -65,6 +67,7 @@ app.use('/', routes);
 app.use('/api/v1/users', ensureAuthenticated, users);
 app.use('/api/v1/locations', ensureAuthenticated, locations);
 app.use('/api/v1/categories', ensureAuthenticated, categories);
+app.use('/api/v1/interests', interests);
 app.use('/api/v1/follows', ensureAuthenticated, follows);
 app.use('/auth', auth);
 
@@ -102,7 +105,8 @@ app.use(function(err, req, res, next) {
 
 function ensureAuthenticated(req, res, next) {
   if (req.isAuthenticated()) { return next(); }
-  res.render('not_authorized.jade', { error: 'Not authorised  |  ' });
+  res.status(401);
+  res.send('You do not have permission to this information')
 }
 
 module.exports = app;

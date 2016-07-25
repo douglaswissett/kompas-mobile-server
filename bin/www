@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var app = require('../app');
+var app = require('../server');
 var debug = require('debug')('kompas_v1:server');
 var http = require('http');
 // var fs = require('fs'),

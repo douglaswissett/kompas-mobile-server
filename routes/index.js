@@ -3,21 +3,22 @@ var router = express.Router();
 
 module.exports = function(LocationSchema, ensureAuthenticated) {
   router.get('/', function(req, res) {
-    res.send('Index');
+    res.status(200);
+    res.send('Welcome to Kompas');
   });
-  router.get('/home', function(req, res) {
-    res.json(req.user)
+  router.get('/dashboard', function(req, res) {
+    res.json(req.user);
   })
-  router.get('/rejected', function(req, res) {
+  router.get('/failedLogin', function(req, res) {
+    res.send(req.flash('signupMessage'));
+  })
+  router.get('/denied', function(req, res) {
     res.status(401);
-    res.send('Auth Failed')
+    res.send(req.flash('loginMessage'));
   });
-  // router.get('/login', function(req, res){
-  //   res.send('Login')
-  // });
   router.get('/logout', function(req, res){
     req.logout();
-    res.redirect('/');
+    res.send('Logged Successfully');
   });
 
   return router;

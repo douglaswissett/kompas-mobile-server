@@ -21,14 +21,20 @@ module.exports = function(passport) {
           if (user) {
             return done(null, false, req.flash('signupMessage', 'That email is already taken.'));
           } else {
-            // if there is no user with that email
-            // create the user
+            // check if first and last name fields are filled
+            if(!req.body.first_name) {
+              return done(null, false, req.flash('signupMessage', 'Must provide first name'));
+            } else if(!req.body.last_name) {
+              return done(null, false, req.flash('signupMessage', 'Must provide last name'));
+            }
+            // create the user profile for mongoDB
             var user = new User();
             user.email = email;
             user.username = email;
-            user.first_name = req.body.firstName;
-            user.last_name = req.body.lastName;
+            user.first_name = req.body.first_name;
+            user.last_name = req.body.last_name;
             user.password = user.generateHash(password);
+            // save user profile to DB
             user.save(function(err) {
               if (err) {
                 throw err;
